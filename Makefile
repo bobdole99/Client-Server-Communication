@@ -4,13 +4,16 @@ runc:
 	java -classpath .:protobuf-java-2.5.0.jar Client --host localhost --port 8004
 
 
-all: client server
+all: proto client server
 
 client:
 	javac -cp protobuf-java-2.5.0.jar Client.java cs/Communication.java
 
 server:
 	javac -cp protobuf-java-2.5.0.jar Server.java cs/Communication.java
+
+proto:
+	protoc -I=. --java_out=. communication.proto
 
 test:
 	echo "Compiling test cases"
