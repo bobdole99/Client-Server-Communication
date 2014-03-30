@@ -12,5 +12,4 @@ To run client:
 
 >> make runc
 
--Known Issue:
-<bold>
+<h2> Known issue </h2>
