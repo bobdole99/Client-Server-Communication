@@ -2,14 +2,21 @@ Client-Server-Communication
 ===========================
 To compile and generate needed classes: 
 
->> make all
+> make all
 
 To run server:
 
->>make runs
+> make runs
 
 To run client:
 
->> make runc
+> make runc
 
-<h2> Known issue </h2>
+To run test cases on client:
+
+> make test
+
+I've included some test cases for client, in order to run testValidCommandLineArgs() and testInvalidCommandLineArgs(), testNumberOfCommandLineArgs() needs to be commented out. In order to run testNumberOfCommandLineArgs, testValidCommandLineArgs() and testInvalidCommandLineArgs() need to be commented out. I think the problem has to do with Client.java being a static class. Also JUnit version 4.8.2 was used for testing.
+
+<h3> Known issue </h3>
+At the last minute I noticed that if the client quits the server will crash.
